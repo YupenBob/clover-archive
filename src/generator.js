@@ -8,7 +8,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const ARTICLES_FILE = path.join(__dirname, '..', 'data', 'processed', 'articles.json');
+const ARTICLES_FILE = path.join(__dirname, '..', 'data', 'processed', 'articles-merged.json');
 const EXPLANATIONS_FILE = path.join(__dirname, '..', 'data', 'processed', 'articles-with-explanations.json');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public');
 
@@ -189,18 +189,21 @@ function indexHTML(laws) {
 }
 
 function lawPageHTML(law) {
-  const articles = law.articles.map(a => `
+  const articles = law.articles.map(a => {
+    const articleText = a.ragContent || a.articleText;
+    return `
     <div class="article-item">
       <div class="article-header">
         <span class="article-num">第 ${a.articleNum} 條</span>
-        <span class="article-meta">${a.category}</span>
+        <span class="article-meta">${a.category || ''}${a.chapter ? ' · ' + a.chapter.trim() : ''}</span>
       </div>
-      <div class="article-text">${escapeHtml(a.articleText)}</div>
+      <div class="article-text">${escapeHtml(articleText)}</div>
       ${a.explanation ? `<div class="explanation-box">
         <div class="section-title">☘️ Clover 白話解釋</div>
         <div class="explanation-content">${a.explanation.replace(/\n/g, '<br>')}</div>
       </div>` : ''}
-    </div>`).join('\n');
+    </div>`;
+  }).join('\n');
 
   const schema = JSON.stringify({
     '@context': 'https://schema.org',
