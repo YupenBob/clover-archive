@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I0020004 - CloverArchive</title>
+  <meta name="description" content="台灣法律知識基礎設施 — 繁體中文法條查詢">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☘️</text></svg>">
+  <style>
+:root {
+  --bg: #0d0d0d;
+  --bg2: #141414;
+  --bg3: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e0e0e0;
+  --text-dim: #888;
+  --accent: #c9a96e;
+  --accent2: #a07850;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+.logo span { color: var(--text-dim); font-weight: 400; font-size: 0.9rem; margin-left: 8px; }
+nav a { margin-left: 20px; color: var(--text-dim); font-size: 0.9rem; }
+nav a:hover { color: var(--accent); }
+main { padding: 40px 0; }
+h1 { font-size: 1.8rem; margin-bottom: 8px; color: var(--text); }
+h2 { font-size: 1.3rem; color: var(--accent); margin: 30px 0 12px; }
+h3 { font-size: 1.1rem; margin: 20px 0 10px; }
+p { margin-bottom: 12px; color: var(--text-dim); }
+.meta { font-size: 0.85rem; color: var(--text-dim); }
+.law-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 30px; }
+.law-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.law-card:hover { border-color: var(--accent); }
+.law-card h3 { color: var(--accent); font-size: 1rem; margin: 0 0 8px; }
+.law-card p { font-size: 0.85rem; margin: 0; }
+.law-card .count { font-size: 0.8rem; color: var(--text-dim); margin-top: 8px; }
+.article-list { margin-top: 30px; }
+.article-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.article-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.article-num { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
+.article-meta { font-size: 0.8rem; color: var(--text-dim); }
+.article-text { font-size: 0.95rem; line-height: 1.8; color: var(--text); white-space: pre-wrap; }
+.section-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.section-title { font-size: 1rem; color: var(--accent2); margin-bottom: 12px; font-weight: 600; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 20px; }
+.breadcrumb a { color: var(--text-dim); }
+.breadcrumb a:hover { color: var(--accent); }
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #000; border-radius: 6px; font-size: 0.9rem; }
+.btn:hover { background: var(--accent2); color: #fff; }
+.search-box { margin: 20px 0; }
+.search-box input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+}
+.search-box input:focus { outline: none; border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">☘️ CloverArchive<span>台灣法律知識庫</span></div>
+      <nav>
+        <a href="/">首頁</a>
+        <a href="/category/civil.html">民事法</a>
+        <a href="/category/criminal.html">刑事法</a>
+        <a href="/category/administrative.html">行政法</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+    <div class="breadcrumb">
+      <a href="/">首頁</a> &gt; I0020004
+    </div>
+    <h1>I0020004</h1>
+    <p class="meta">一般法 · 共 17 條法條</p>
+    <div class="article-list">
+      
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00010 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法依中華民國憲法第二十四條制定之。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00020 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法所稱公務員者，謂依法令從事於公務之人員。
+公務員於執行職務行使公權力時，因故意或過失不法侵害人民自由或權利者，國家應負損害賠償責任。公務員怠於執行職務，致人民自由或權利遭受損害者亦同。
+前項情形，公務員有故意或重大過失時，賠償義務機關對之有求償權。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00030 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">公共設施因設置或管理有欠缺，致人民生命、身體、人身自由或財產受損害者，國家應負損害賠償責任。
+前項設施委託民間團體或個人管理時，因管理欠缺致人民生命、身體、人身自由或財產受損害者，國家應負損害賠償責任。
+前二項情形，於開放之山域、水域等自然公物，經管理機關、受委託管理之民間團體或個人已就使用該公物為適當之警告或標示，而人民仍從事冒險或具危險性活動，國家不負損害賠償責任。
+第一項及第二項情形，於開放之山域、水域等自然公物內之設施，經管理機關、受委託管理之民間團體或個人已就使用該設施為適當之警告或標示，而人民仍從事冒險或具危險性活動，得減輕或免除國家應負之損害賠償責任。
+第一項、第二項及前項情形，就損害原因有應負責任之人時，賠償義務機關對之有求償權。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00040 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">受委託行使公權力之團體，其執行職務之人於行使公權力時，視同委託機關之公務員。受委託行使公權力之個人，於執行職務行使公權力時亦同。
+前項執行職務之人有故意或重大過失時，賠償義務機關對受委託之團體或個人有求償權。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00050 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">國家損害賠償，除依本法規定外，適用民法規定。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00060 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">國家損害賠償，本法及民法以外其他法律有特別規定者，適用其他法律。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00070 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">國家負損害賠償責任者，應以金錢為之。但以回復原狀為適當者，得依請求，回復損害發生前原狀。
+前項賠償所需經費，應由各級政府編列預算支應之。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00080 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">賠償請求權，自請求權人知有損害時起，因二年間不行使而消滅；自損害發生時起，逾五年者亦同。
+第二條第三項、第三條第五項及第四條第二項之求償權，自支付賠償金或回復原狀之日起，因二年間不行使而消滅。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00090 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">依第二條第二項請求損害賠償者，以該公務員所屬機關為賠償義務機關。
+依第三條第一項請求損害賠償者，以該公共設施之設置或管理機關為賠償義務機關；依第三條第二項請求損害賠償者，以委託機關為賠償義務機關。
+前二項賠償義務機關經裁撤或改組者，以承受其業務之機關為賠償義務機關。無承受其業務之機關者，以其上級機關為賠償義務機關。
+不能依前三項確定賠償義務機關，或於賠償義務機關有爭議時，得請求其上級機關確定之。其上級機關自被請求之日起逾二十日不為確定者，得逕以該上級機關為賠償義務機關。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00100 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">依本法請求損害賠償時，應先以書面向賠償義務機關請求之。
+賠償義務機關對於前項請求，應即與請求權人協議。協議成立時，應作成協議書，該項協議書得為執行名義。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00110 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">賠償義務機關拒絕賠償，或自提出請求之日起逾三十日不開始協議，或自開始協議之日起逾六十日協議不成立時，請求權人得提起損害賠償之訴。但已依行政訴訟法規定，附帶請求損害賠償者，就同一原因事實，不得更行起訴。
+依本法請求損害賠償時，法院得依聲請為假處分，命賠償義務機關暫先支付醫療費或喪葬費。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00120 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">損害賠償之訴，除依本法規定外，適用民事訴訟法之規定。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00130 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">有審判或追訴職務之公務員，因執行職務侵害人民自由或權利，就其參與審判或追訴案件犯職務上之罪，經判決有罪確定者，適用本法規定。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00140 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法於其他公法人準用之。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00150 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法於外國人為被害人時，以依條約或其本國法令或慣例，中華民國人得在該國與該國人享受同等權利者為限，適用之。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00160 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法施行細則，由行政院定之。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 00170 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">本法自中華民國七十年七月一日施行。
+本法修正條文自公布日施行。</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+    </div>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalCode","name":"I0020004","jurisdiction":"Taiwan","description":"I0020004 共 17 條"}</script>
+  </main>
+  <footer>
+    <div class="container">
+      <p>☘️ CloverArchive · 台灣法律知識庫 · 資料來源：<a href="https://github.com/Dusty-K/LexKo-Codex" target="_blank">LexKo-Codex</a> (MIT License)</p>
+    </div>
+  </footer>
+</body>
+</html>

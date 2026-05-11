@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>favorites - CloverArchive</title>
+  <meta name="description" content="台灣法律知識基礎設施 — 繁體中文法條查詢">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☘️</text></svg>">
+  <style>
+:root {
+  --bg: #0d0d0d;
+  --bg2: #141414;
+  --bg3: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e0e0e0;
+  --text-dim: #888;
+  --accent: #c9a96e;
+  --accent2: #a07850;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+.logo span { color: var(--text-dim); font-weight: 400; font-size: 0.9rem; margin-left: 8px; }
+nav a { margin-left: 20px; color: var(--text-dim); font-size: 0.9rem; }
+nav a:hover { color: var(--accent); }
+main { padding: 40px 0; }
+h1 { font-size: 1.8rem; margin-bottom: 8px; color: var(--text); }
+h2 { font-size: 1.3rem; color: var(--accent); margin: 30px 0 12px; }
+h3 { font-size: 1.1rem; margin: 20px 0 10px; }
+p { margin-bottom: 12px; color: var(--text-dim); }
+.meta { font-size: 0.85rem; color: var(--text-dim); }
+.law-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 30px; }
+.law-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.law-card:hover { border-color: var(--accent); }
+.law-card h3 { color: var(--accent); font-size: 1rem; margin: 0 0 8px; }
+.law-card p { font-size: 0.85rem; margin: 0; }
+.law-card .count { font-size: 0.8rem; color: var(--text-dim); margin-top: 8px; }
+.article-list { margin-top: 30px; }
+.article-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.article-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.article-num { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
+.article-meta { font-size: 0.8rem; color: var(--text-dim); }
+.article-text { font-size: 0.95rem; line-height: 1.8; color: var(--text); white-space: pre-wrap; }
+.section-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.section-title { font-size: 1rem; color: var(--accent2); margin-bottom: 12px; font-weight: 600; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 20px; }
+.breadcrumb a { color: var(--text-dim); }
+.breadcrumb a:hover { color: var(--accent); }
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #000; border-radius: 6px; font-size: 0.9rem; }
+.btn:hover { background: var(--accent2); color: #fff; }
+.search-box { margin: 20px 0; }
+.search-box input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+}
+.search-box input:focus { outline: none; border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">☘️ CloverArchive<span>台灣法律知識庫</span></div>
+      <nav>
+        <a href="/">首頁</a>
+        <a href="/category/civil.html">民事法</a>
+        <a href="/category/criminal.html">刑事法</a>
+        <a href="/category/administrative.html">行政法</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+    <div class="breadcrumb">
+      <a href="/">首頁</a> &gt; favorites
+    </div>
+    <h1>favorites</h1>
+    <p class="meta">一般法 · 共 3 條法條</p>
+    <div class="article-list">
+      
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 0 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">G0390002</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 1 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">I0020024</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 2 條</span>
+        <span class="article-meta">一般法</span>
+      </div>
+      <div class="article-text">B0010001</div>
+      <div class="section-box">
+        <div class="section-title">💬 白話解釋</div>
+        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
+      </div>
+    </div>
+    </div>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalCode","name":"favorites","jurisdiction":"Taiwan","description":"favorites 共 3 條"}</script>
+  </main>
+  <footer>
+    <div class="container">
+      <p>☘️ CloverArchive · 台灣法律知識庫 · 資料來源：<a href="https://github.com/Dusty-K/LexKo-Codex" target="_blank">LexKo-Codex</a> (MIT License)</p>
+    </div>
+  </footer>
+</body>
+</html>

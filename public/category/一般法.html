@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一般法 - CloverArchive</title>
+  <meta name="description" content="台灣法律知識基礎設施 — 繁體中文法條查詢">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☘️</text></svg>">
+  <style>
+:root {
+  --bg: #0d0d0d;
+  --bg2: #141414;
+  --bg3: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e0e0e0;
+  --text-dim: #888;
+  --accent: #c9a96e;
+  --accent2: #a07850;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+.logo span { color: var(--text-dim); font-weight: 400; font-size: 0.9rem; margin-left: 8px; }
+nav a { margin-left: 20px; color: var(--text-dim); font-size: 0.9rem; }
+nav a:hover { color: var(--accent); }
+main { padding: 40px 0; }
+h1 { font-size: 1.8rem; margin-bottom: 8px; color: var(--text); }
+h2 { font-size: 1.3rem; color: var(--accent); margin: 30px 0 12px; }
+h3 { font-size: 1.1rem; margin: 20px 0 10px; }
+p { margin-bottom: 12px; color: var(--text-dim); }
+.meta { font-size: 0.85rem; color: var(--text-dim); }
+.law-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 30px; }
+.law-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.law-card:hover { border-color: var(--accent); }
+.law-card h3 { color: var(--accent); font-size: 1rem; margin: 0 0 8px; }
+.law-card p { font-size: 0.85rem; margin: 0; }
+.law-card .count { font-size: 0.8rem; color: var(--text-dim); margin-top: 8px; }
+.article-list { margin-top: 30px; }
+.article-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.article-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.article-num { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
+.article-meta { font-size: 0.8rem; color: var(--text-dim); }
+.article-text { font-size: 0.95rem; line-height: 1.8; color: var(--text); white-space: pre-wrap; }
+.section-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.section-title { font-size: 1rem; color: var(--accent2); margin-bottom: 12px; font-weight: 600; }
+.breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 20px; }
+.breadcrumb a { color: var(--text-dim); }
+.breadcrumb a:hover { color: var(--accent); }
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #000; border-radius: 6px; font-size: 0.9rem; }
+.btn:hover { background: var(--accent2); color: #fff; }
+.search-box { margin: 20px 0; }
+.search-box input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+}
+.search-box input:focus { outline: none; border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">☘️ CloverArchive<span>台灣法律知識庫</span></div>
+      <nav>
+        <a href="/">首頁</a>
+        <a href="/category/civil.html">民事法</a>
+        <a href="/category/criminal.html">刑事法</a>
+        <a href="/category/administrative.html">行政法</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+    <div class="breadcrumb">
+      <a href="/">首頁</a> &gt; 一般法
+    </div>
+    <h1>一般法</h1>
+    <p>共 30 部法規</p>
+    <div class="law-grid">
+      
+  <a href="/law/A0000001.html" class="law-card">
+    <h3>A0000001</h3>
+    <p>一般法</p>
+    <div class="count">198 條法條</div>
+  </a>
+
+  <a href="/law/A0000002.html" class="law-card">
+    <h3>A0000002</h3>
+    <p>一般法</p>
+    <div class="count">13 條法條</div>
+  </a>
+
+  <a href="/law/A0030055.html" class="law-card">
+    <h3>A0030055</h3>
+    <p>一般法</p>
+    <div class="count">198 條法條</div>
+  </a>
+
+  <a href="/law/A0030154.html" class="law-card">
+    <h3>A0030154</h3>
+    <p>一般法</p>
+    <div class="count">430 條法條</div>
+  </a>
+
+  <a href="/law/A0030159.html" class="law-card">
+    <h3>A0030159</h3>
+    <p>一般法</p>
+    <div class="count">113 條法條</div>
+  </a>
+
+  <a href="/law/A0030320.html" class="law-card">
+    <h3>A0030320</h3>
+    <p>一般法</p>
+    <div class="count">132 條法條</div>
+  </a>
+
+  <a href="/law/B0000001.html" class="law-card">
+    <h3>B0000001</h3>
+    <p>一般法</p>
+    <div class="count">1578 條法條</div>
+  </a>
+
+  <a href="/law/B0010001.html" class="law-card">
+    <h3>B0010001</h3>
+    <p>一般法</p>
+    <div class="count">855 條法條</div>
+  </a>
+
+  <a href="/law/B0010004.html" class="law-card">
+    <h3>B0010004</h3>
+    <p>一般法</p>
+    <div class="count">197 條法條</div>
+  </a>
+
+  <a href="/law/B0010043.html" class="law-card">
+    <h3>B0010043</h3>
+    <p>一般法</p>
+    <div class="count">8 條法條</div>
+  </a>
+
+  <a href="/law/B0010048.html" class="law-card">
+    <h3>B0010048</h3>
+    <p>一般法</p>
+    <div class="count">226 條法條</div>
+  </a>
+
+  <a href="/law/B0010064.html" class="law-card">
+    <h3>B0010064</h3>
+    <p>一般法</p>
+    <div class="count">58 條法條</div>
+  </a>
+
+  <a href="/law/C0000001.html" class="law-card">
+    <h3>C0000001</h3>
+    <p>一般法</p>
+    <div class="count">478 條法條</div>
+  </a>
+
+  <a href="/law/C0010001.html" class="law-card">
+    <h3>C0010001</h3>
+    <p>一般法</p>
+    <div class="count">753 條法條</div>
+  </a>
+
+  <a href="/law/C0010010.html" class="law-card">
+    <h3>C0010010</h3>
+    <p>一般法</p>
+    <div class="count">39 條法條</div>
+  </a>
+
+  <a href="/law/D0060001.html" class="law-card">
+    <h3>D0060001</h3>
+    <p>一般法</p>
+    <div class="count">292 條法條</div>
+  </a>
+
+  <a href="/law/favorites.html" class="law-card">
+    <h3>favorites</h3>
+    <p>一般法</p>
+    <div class="count">3 條法條</div>
+  </a>
+
+  <a href="/law/G0380028.html" class="law-card">
+    <h3>G0380028</h3>
+    <p>一般法</p>
+    <div class="count">164 條法條</div>
+  </a>
+
+  <a href="/law/G0390002.html" class="law-card">
+    <h3>G0390002</h3>
+    <p>一般法</p>
+    <div class="count">297 條法條</div>
+  </a>
+
+  <a href="/law/G0400001.html" class="law-card">
+    <h3>G0400001</h3>
+    <p>一般法</p>
+    <div class="count">251 條法條</div>
+  </a>
+
+  <a href="/law/I0020004.html" class="law-card">
+    <h3>I0020004</h3>
+    <p>一般法</p>
+    <div class="count">17 條法條</div>
+  </a>
+
+  <a href="/law/I0020024.html" class="law-card">
+    <h3>I0020024</h3>
+    <p>一般法</p>
+    <div class="count">95 條法條</div>
+  </a>
+
+  <a href="/law/J0070001.html" class="law-card">
+    <h3>J0070001</h3>
+    <p>一般法</p>
+    <div class="count">125 條法條</div>
+  </a>
+
+  <a href="/law/J0070007.html" class="law-card">
+    <h3>J0070007</h3>
+    <p>一般法</p>
+    <div class="count">180 條法條</div>
+  </a>
+
+  <a href="/law/J0070008.html" class="law-card">
+    <h3>J0070008</h3>
+    <p>一般法</p>
+    <div class="count">99 條法條</div>
+  </a>
+
+  <a href="/law/J0070017.html" class="law-card">
+    <h3>J0070017</h3>
+    <p>一般法</p>
+    <div class="count">177 條法條</div>
+  </a>
+
+  <a href="/law/J0080001.html" class="law-card">
+    <h3>J0080001</h3>
+    <p>一般法</p>
+    <div class="count">567 條法條</div>
+  </a>
+
+  <a href="/law/J0170001.html" class="law-card">
+    <h3>J0170001</h3>
+    <p>一般法</p>
+    <div class="count">91 條法條</div>
+  </a>
+
+  <a href="/law/J0170002.html" class="law-card">
+    <h3>J0170002</h3>
+    <p>一般法</p>
+    <div class="count">54 條法條</div>
+  </a>
+
+  <a href="/law/N0030001.html" class="law-card">
+    <h3>N0030001</h3>
+    <p>一般法</p>
+    <div class="count">110 條法條</div>
+  </a>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>☘️ CloverArchive · 台灣法律知識庫 · 資料來源：<a href="https://github.com/Dusty-K/LexKo-Codex" target="_blank">LexKo-Codex</a> (MIT License)</p>
+    </div>
+  </footer>
+</body>
+</html>
