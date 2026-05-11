@@ -9,6 +9,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const ARTICLES_FILE = path.join(__dirname, '..', 'data', 'processed', 'articles.json');
+const EXPLANATIONS_FILE = path.join(__dirname, '..', 'data', 'processed', 'articles-with-explanations.json');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public');
 
 function timestamp() {
@@ -79,14 +80,24 @@ p { margin-bottom: 12px; color: var(--text-dim); }
 .article-num { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
 .article-meta { font-size: 0.8rem; color: var(--text-dim); }
 .article-text { font-size: 0.95rem; line-height: 1.8; color: var(--text); white-space: pre-wrap; }
-.section-box {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-}
 .section-title { font-size: 1rem; color: var(--accent2); margin-bottom: 12px; font-weight: 600; }
+.explanation-box {
+  background: var(--bg3);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+}
+.explanation-box .section-title {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.explanation-content {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
 .breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 20px; }
 .breadcrumb a { color: var(--text-dim); }
 .breadcrumb a:hover { color: var(--accent); }
@@ -185,10 +196,10 @@ function lawPageHTML(law) {
         <span class="article-meta">${a.category}</span>
       </div>
       <div class="article-text">${escapeHtml(a.articleText)}</div>
-      <div class="section-box">
-        <div class="section-title">💬 白話解釋</div>
-        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
-      </div>
+      ${a.explanation ? `<div class="explanation-box">
+        <div class="section-title">☘️ Clover 白話解釋</div>
+        <div class="explanation-content">${a.explanation.replace(/\n/g, '<br>')}</div>
+      </div>` : ''}
     </div>`).join('\n');
 
   const schema = JSON.stringify({
@@ -260,9 +271,26 @@ async function main() {
 
   console.log(`[${timestamp()}] Loaded ${articles.length} articles`);
 
+  // Load explanations if available
+  let explanationMap = {};
+  try {
+    const explData = await fs.readFile(EXPLANATIONS_FILE, 'utf-8');
+    const explArticles = JSON.parse(explData);
+    for (const a of explArticles) {
+      if (a.explanation && a.explanation.trim() && !a.explanation.startsWith('【注】解釋生成失敗')) {
+        explanationMap[`${a.lawCode}-${a.articleNum}`] = a.explanation;
+      }
+    }
+    console.log(`[${timestamp()}] Loaded ${Object.keys(explanationMap).length} explanations`);
+  } catch(e) {
+    console.log(`[${timestamp()}] No explanations file, skipping`);
+  }
+
   // Group by lawCode
   const byLaw = {};
   for (const a of articles) {
+    const key = `${a.lawCode}-${a.articleNum}`;
+    if (explanationMap[key]) a.explanation = explanationMap[key];
     if (!byLaw[a.lawCode]) byLaw[a.lawCode] = [];
     byLaw[a.lawCode].push(a);
   }

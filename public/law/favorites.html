@@ -68,14 +68,24 @@ p { margin-bottom: 12px; color: var(--text-dim); }
 .article-num { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
 .article-meta { font-size: 0.8rem; color: var(--text-dim); }
 .article-text { font-size: 0.95rem; line-height: 1.8; color: var(--text); white-space: pre-wrap; }
-.section-box {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-}
 .section-title { font-size: 1rem; color: var(--accent2); margin-bottom: 12px; font-weight: 600; }
+.explanation-box {
+  background: var(--bg3);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+}
+.explanation-box .section-title {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.explanation-content {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
 .breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 20px; }
 .breadcrumb a { color: var(--text-dim); }
 .breadcrumb a:hover { color: var(--accent); }
@@ -129,10 +139,7 @@ footer {
         <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">G0390002</div>
-      <div class="section-box">
-        <div class="section-title">💬 白話解釋</div>
-        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
-      </div>
+      
     </div>
 
     <div class="article-item">
@@ -141,10 +148,7 @@ footer {
         <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">I0020024</div>
-      <div class="section-box">
-        <div class="section-title">💬 白話解釋</div>
-        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
-      </div>
+      
     </div>
 
     <div class="article-item">
@@ -153,10 +157,7 @@ footer {
         <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">B0010001</div>
-      <div class="section-box">
-        <div class="section-title">💬 白話解釋</div>
-        <p style="color: var(--text-dim); font-style: italic;">（白話解釋準備中...）</p>
-      </div>
+      
     </div>
     </div>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalCode","name":"favorites","jurisdiction":"Taiwan","description":"favorites 共 3 條"}</script>
