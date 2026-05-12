@@ -98,7 +98,21 @@ footer {
   border-top: 1px solid var(--border);
   margin-top: 60px;
 }
-.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #fff; border-radius: 6px; font-size: 0.9rem; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.chapter-nav a {
+  padding: 6px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.chapter-nav a:hover { background: var(--header-bg); color: #fff; border-color: var(--header-bg); }
+.chapter-header { background: var(--bg2); padding: 12px 20px; border-left: 4px solid var(--header-bg); margin: 28px 0 12px; border-radius: 0 6px 6px 0; }
+.chapter-header h2 { color: var(--header-bg); margin: 0; padding: 0; border: none; font-size: 1.1rem; }
+.chapter-nav-wrap { margin-bottom: 8px; }
 .btn:hover { background: var(--accent2); }
 .search-box { margin: 24px 0 20px; }
 .search-box input {
@@ -132,16 +146,24 @@ footer {
       <a href="/">首頁</a> &gt; 勞動基準法
     </div>
     <h1>勞動基準法</h1>
-    <p class="meta">一般法 · 共 110 條法條</p>
+    <p class="meta">一般法 · 共 110 條法條 · 7 章</p>
+    <div class="chapter-nav-wrap"><div class="chapter-nav">
+<a href="#ch-第-二-章-勞動契約">第 二 章 勞動契約</a>
+<a href="#ch-第-三-章-工資">第 三 章 工資</a>
+<a href="#ch-第-四-章-工作時間-休息-休假">第 四 章 工作時間、休息、休假</a>
+<a href="#ch-第-五-章-童工-女工">第 五 章 童工、女工</a>
+<a href="#ch-第-七-章-職業災害補償">第 七 章 職業災害補償</a>
+<a href="#ch-第-九-章-工作規則">第 九 章 工作規則</a>
+<a href="#ch-第-十一-章-罰則">第 十一 章 罰則</a>
+</div></div>
     <div class="search-box">
-      <input type="text" id="articleSearch" placeholder="搜尋法條內容..." oninput="filterArticles(this.value)">
+      <input type="text" id="articleSearch" placeholder="搜尋法條..." oninput="filterArticles(this.value)">
     </div>
     <div class="article-list" id="articleList">
-      
-    <div class="article-item">
+      <div class="chapter-header" id="ch-第-二-章-勞動契約"><h2>第 二 章 勞動契約</h2></div>
+<div class="article-item" data-chapter="第 二 章 勞動契約">
       <div class="article-header">
         <span class="article-num">第 00010 條</span>
-        <span class="article-meta">一般法 · 第 二 章 勞動契約</span>
       </div>
       <div class="article-text">定期契約屆滿後或不定期契約因故停止履行後，未滿三個月而訂定新約或繼續履行原約時，勞工前後工作年資，應合併計算。</div>
       <div class="explanation-box">
@@ -149,11 +171,10 @@ footer {
         <div class="explanation-content">您好！感謝您提出的任務，我非常樂意為您進行法律白話翻譯。<br><br>不過，我在檢視您提供的資訊時發現了一個小問題：<br><br>---<br><br>**📋 目前的資訊：**<br><br>- **法條：** 第10條<br>- **章節：** 第一章 總則<br><br>---<br><br>**❓ 需要確認的事項：**<br><br>目前只看到「第10條」和「第一章 總則」的標題，但**缺少具體的法條內容**。<br><br>「第一章 總則」這個標題可以出現在许多不同的法律中，例如：<br><br>- 中華民國刑法<br>- 民法<br>- 民事訴訟法<br>- 刑事訴訟法<br>- 各類特別法<br><br>---<br><br>**✅ 請您幫我補充以下資訊：**<br><br>1. **法律名稱**：例如「民法第10條」或「刑法第10條」<br>2. **法條的完整文字**：條文的實際內容<br><br>請把完整的法條內容貼給我，我就能用最白話的方式為您翻譯解釋！🙏</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-三-章-工資"><h2>第 三 章 工資</h2></div>
+<div class="article-item" data-chapter="第 三 章 工資">
       <div class="article-header">
         <span class="article-num">第 00020 條</span>
-        <span class="article-meta">一般法 · 第 三 章 工資</span>
       </div>
       <div class="article-text">事業單位改組或轉讓時，除新舊雇主商定留用之勞工外，其餘勞工應依第十六條規定期間預告終止契約，並應依第十七條規定發給勞工資遣費。其留用勞工之工作年資，應由新雇主繼續予以承認。</div>
       <div class="explanation-box">
@@ -161,11 +182,10 @@ footer {
         <div class="explanation-content">【一句話概括】<br>這條法律是告訴大家，勞動基準法就是老闆和員工之間的最基本遊戲規則，誰都不能比這個標準還差。<br><br>【白話解釋】<br>政府訂這個「勞動基準法」，最主要的目的就是當老闆和員工的最低底線。<br><br>就像打game一樣，這個法律就是告訴大家：「最起碼老闆要給你這些保障」，比如基本工資、最長工時、休假這些。<br><br>如果老闆跟你說「我們另訂的規矩比法律更好」，那OK；但如果老闆說「我要給你的比法律規定還爛」，那就不行，法律不允許。<br><br>【重點提示】<br>很多人會誤以為「只要雙方說好就好」，但法律有最低標準的保障。<br><br>意思是：<br>- 老闆可以給你更好的待遇（ex: 年薪百萬）<br>- 但不能給你比法律規定更差的條件（ex: 日薪低於法定基本工資）<br><br>所以不管合約怎麼寫，只要內容比法律規定還爛，那就是違法、無效的喔！</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-四-章-工作時間-休息-休假"><h2>第 四 章 工作時間、休息、休假</h2></div>
+<div class="article-item" data-chapter="第 四 章 工作時間、休息、休假">
       <div class="article-header">
         <span class="article-num">第 00030 條</span>
-        <span class="article-meta">一般法 · 第 四 章 工作時間、休息、休假</span>
       </div>
       <div class="article-text">勞工正常工作時間，每日不得超過八小時，每週不得超過四十小時。前項正常工作時間，雇主經工會同意，如事業單位無工會者，經勞資會議同意後，得將其二週內二日之正常工作時數，分配於其他工作日。其分配於其他工作日之時數，每日不得超過二小時。但每週工作總時數不得超過四十八小時。第一項正常工作時間，雇主經工會同意，如事業單位無工會者，經勞資會議同意後，得將八週內之正常工作時數加以分配。但每日正常工作時間不得超過八小時，每週工作總時數不得超過四十八小時。前二項規定，僅適用於經中央主管機關指定之行業。雇主應置備勞工出勤紀錄，並保存五年。前項出勤紀錄，應逐日記載勞工出勤情形至分鐘為止。勞工向雇主申請其出勤紀錄副本或影本時，雇主不得拒絕。雇主不得以第一項正常工作時間之修正，作為減少勞工工資之事由。第一項至第三項及第三十條之一之正常工作時間，雇主得視勞工照顧家庭成員需要，允許勞工於不變更每日正常工作時數下，在一小時範圍內，彈性調整工作開始及終止之時間。</div>
       <div class="explanation-box">
@@ -173,11 +193,9 @@ footer {
         <div class="explanation-content">【一句話概括】  <br>本條文把勞動基準法裡常用的十個專有名詞（如「勞工」「雇主」「工資」等）寫得清清楚楚，讓大家知道這些詞到底是指誰、或是指什麼東西。<br><br>【白話解釋】  <br><br>1. **勞工**：就是被老闆請去上班、靠領薪水過日子的人。  <br>2. **雇主**：雇用你、付你薪水的老闆，或是代替老闆管事的人。  <br>3. **工資**：你因為工作得到的各種報酬，像是基本月薪、按時/日/月/件算的獎金、津貼、加給等，只要是「經常性」的錢都算。  <br>4. **平均工資**：把「離職前六個月」拿到的所有</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item" data-chapter="第 四 章 工作時間、休息、休假">
       <div class="article-header">
         <span class="article-num">第 00040 條</span>
-        <span class="article-meta">一般法 · 第 四 章 工作時間、休息、休假</span>
       </div>
       <div class="article-text">因天災、事變或突發事件，雇主認有繼續工作之必要時，得停止第三十六條至第三十八條所定勞工之假期。但停止假期之工資，應加倍發給，並應於事後補假休息。前項停止勞工假期，應於事後二十四小時內，詳述理由，報請當地主管機關核備。</div>
       <div class="explanation-box">
@@ -185,11 +203,10 @@ footer {
         <div class="explanation-content">【一句話概括】<br>這條法律在說「哪些行業的老闆和員工，必須遵守勞動基準法」。<br><br>【白話解釋】<br>這條把台灣所有行業分成8大類，幾乎所有工作都包含在內。不管你在超商打工、在農場種田、去工地蓋房子、當水電師傅、開計程車、送快遞、當記者或電視台工作，全部都適用這部法律。<br><br>但是！政府留了一個小後門：如果某個行業真的非常特殊，實在很難用一般規定來管理，經過政府特別公告後，這個行業的老闆和員工就可以「不完全」適用這部法律。例如，部分高階白領主管或外國籍船員，可能就不適用部分規定。<br><br>不過這個例外不能亂用！法律規定</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-五-章-童工-女工"><h2>第 五 章 童工、女工</h2></div>
+<div class="article-item" data-chapter="第 五 章 童工、女工">
       <div class="article-header">
         <span class="article-num">第 00050 條</span>
-        <span class="article-meta">一般法 · 第 五 章 童工、女工</span>
       </div>
       <div class="article-text">女工分娩前後，應停止工作，給予產假八星期；妊娠三個月以上流產者，應停止工作，給予產假四星期。前項女工受僱工作在六個月以上者，停止工作期間工資照給；未滿六個月者減半發給。</div>
       <div class="explanation-box">
@@ -197,11 +214,10 @@ footer {
         <div class="explanation-content">【一句話概括】<br>這條法律規定了誰是負責執行這部法律的「老大」——從中央到地方各有不同的政府機關。<br><br>【白話解釋】<br>這條很簡單，就是告訴大家：當你要處理跟這部法律有關的事情時，該找誰反映或申訴。<br><br>根據你在哪裡，窗口會不一樣：<br>- 如果你在台北市、新北市、台中市、高雄市這些「直轄市」，就找這個市的政府（例如台北市政府）。<br>- 如果你在其他縣市，例如新竹縣、彰化縣，就找那個縣或市的政府。<br>- 如果事情涉及到整個國家的政策或規定，就找中央的「勞動部」。<br><br>簡單來說，就像學校有事要找班長、公司有事要找主管一樣，這條法律就是規定「這件事該由誰負責」。<br><br>【重點提示】<br>一般在生活中遇到勞動相關的問題（例如：薪水被扣、加班費領不到、老闆不給假），你要申訴或檢舉時，**先看你公司在哪個縣市**，就找當地的縣市政府勞工局/處。例如你在台南工作，就找台南市政府，不是直接找中央的勞動部。不過如果你要問的是全國性的政策或法規解釋，可以直接找勞動部。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-七-章-職業災害補償"><h2>第 七 章 職業災害補償</h2></div>
+<div class="article-item" data-chapter="第 七 章 職業災害補償">
       <div class="article-header">
         <span class="article-num">第 00060 條</span>
-        <span class="article-meta">一般法 · 第 七 章 職業災害補償</span>
       </div>
       <div class="article-text">雇主依前條規定給付之補償金額，得抵充就同一事故所生損害之賠償金額。</div>
       <div class="explanation-box">
@@ -209,11 +225,10 @@ footer {
         <div class="explanation-content">【一句話概括】<br>老闆不准用強迫、威脅或關起來的方式逼員工工作。<br><br>【白話解釋】<br>這條很清楚地在保護員工。老闆不能因為想要員工加班或做什麼工作，就用嚇人的方式（例如威脅要打人或扣薪水）、把人關起來不給離開、或是動手打人逼員工服從。這些都是犯法的行為，員工如果遇到，可以拒絕，也有權報警或找勞工局幫忙。<br><br>例如：今天老闆要求你假日加班，你說不要，他就威脅說「明天不用來了」，這算是「脅迫」。或者老闆把你的員工證沒收、把你鎖在工廠裡不讓你出去，這就是「拘禁」。這些都不可以。<br><br>【重點提示】<br>・老闆叫你做的事如果你覺得害怕、不合理，你可以拒絕。<br>・不管老闆怎麼威脅你，都不能真的強迫你去工作。<br>・遇到這種情況，記得錄音、留下證據，然後打1955勞工專線求助。<br>・這條保障的是最基本的尊嚴，沒有任何工作值得用自由和安全去換。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-九-章-工作規則"><h2>第 九 章 工作規則</h2></div>
+<div class="article-item" data-chapter="第 九 章 工作規則">
       <div class="article-header">
         <span class="article-num">第 00070 條</span>
-        <span class="article-meta">一般法 · 第 九 章 工作規則</span>
       </div>
       <div class="article-text">雇主僱用勞工人數在三十人以上者，應依其事業性質，就左列事項訂立工作規則，報請主管機關核備後並公開揭示之：一、工作時間、休息、休假、國定紀念日、特別休假及繼續性工作之輪班方法。二、工資之標準、計算方法及發放日期。三、延長工作時間。四、津貼及獎金。五、應遵守之紀律。六、考勤、請假、獎懲及升遷。七、受僱、解僱、資遣、離職及退休。八、災害傷病補償及撫卹。九、福利措施。十、勞雇雙方應遵守勞工安全衛生規定。十一、勞雇雙方溝通意見加強合作之方法。十二、其他。</div>
       <div class="explanation-box">
@@ -221,11 +236,10 @@ footer {
         <div class="explanation-content"><br>【一句話概括】  <br>別人跟老闆簽的約，別人不能插手從中撈錢。  <br><br>【白話解釋】  <br>這條法律說，當有人跟公司或老闆簽了工作合約，**沒有正當理由**的人不能跑去干預或破壞那個合約，然後再從中拿取**不正當的好處**。  <br>舉例來說，如果小明跟一家餐廳簽了當服務員的合約，另外一個人跑來跟餐廳說「我可以介紹更便宜的員工，但你得給我介紹費」——這就是**介入別人的合約並抽取不法利益**，是不允許的。  <br>簡單說，就是**保護員工跟老闆之間的約定，不讓外人從中撈油水**。  <br><br>【重點提示】  <br>- **什麼算「介入」**：不僅是直接破壞合約，像是介紹、逼迫、或以其他方式影響合約的內容、執行，都算。  <br>- **「抽取不法利益」**指的是透過干預別人的合約，拿到不正當的錢財、回扣、或其他好處。  <br>- **常見的陷阱**：有些「人頭」或「中間人」聲稱能幫你找到更好的工作，要求你先付費用，這時如果他們是透過介入別人的合約來獲利，就可能觸法。  <br>- **如果遇到這種情況**，千萬不要付錢，應向雇主或相關單位反映，避免自己成為「被抽取不法利益」的對象。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header" id="ch-第-十一-章-罰則"><h2>第 十一 章 罰則</h2></div>
+<div class="article-item" data-chapter="第 十一 章 罰則">
       <div class="article-header">
         <span class="article-num">第 00080 條</span>
-        <span class="article-meta">一般法 · 第 十一 章 罰則</span>
       </div>
       <div class="article-text">拒絕、規避或阻撓勞工檢查員依法執行職務者，處新臺幣三萬元以上十五萬元以下罰鍰。</div>
       <div class="explanation-box">
@@ -233,11 +247,10 @@ footer {
         <div class="explanation-content">【一句話概括】<br>老闆要把每個員工的基本資料和工作情形記錄下來，而且員工離職後還要再留五年。<br><br>---<br><br>【白話解釋】<br>所謂「勞工名卡」就像公司替員工建的一份完整的人事資料夾。老闆必須在上面填寫員工的姓名、性別、出生年月日、身份證字號、住址、學歷、開始工作的日期、薪水、勞保生效日、獎勵或懲罰記錄、受傷或生病情形等所有重要資料。這份資料不是員工一離開就可以丟掉的，老闆還得再多留五年。<br><br>舉例來說，小明應徵時填了身分證字號、到職日期，公司就要把這些統統記進名卡裡。就算小明三年後跳槽，公司還是得把這份資料再多留五年才能銷毀。<br><br>---<br><br>【重點提示】<br>老闆如果沒有做好這份紀錄、或保管期限未滿就把它弄丟了，就違反了《勞動基準法》的規定，員工可以主張老闆有行政疏失。這份名卡的重點在於「連續紀錄」——不只是剛進公司時填一次，而是從到職到離職整段期間的重要資料都要持續更新並留存。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="chapter-header"><h2>其他條文</h2></div>
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00090 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主對於僱用之勞工，應預防職業上災害，建立適當之工作環境及福利設施。其有關安全衛生及福利事項，依有關法律之規定。</div>
       <div class="explanation-box">
@@ -245,11 +258,9 @@ footer {
         <div class="explanation-content">【一句話概括】  <br>老闆必須保護員工不受到工作上的傷害，並提供安全、衛生的環境和福利設施。<br><br>【白話解釋】  <br>- 老闆（雇主）要盡量避免工人在工作時受傷，像是工地上要有防護欄杆、工廠要有通風設備。  <br>- 同時，老闆也要提供讓員工生活舒適的設施，例如乾淨的飲水、休息區或健康檢查。  <br>- 如果有專門的安全、衛生或福利的法律規定，老闆就必須按照那些法律來做。<br><br>**生活例子**：  <br>小美在餐廳工作，老闆不只給她發薪水，還要確保廚房的油煙不會讓她得呼吸道疾病，並提供乾淨的洗手間和急救箱。這就是老闆「預防職業災害」和「建立福利設施」的責任。<br><br>【重點提示】  <br>1. **安全與健康是僱主的首要責任**，即使員工自己沒提出，老闆也必須主動做好防護措施。  <br>2. 若公司沒有提供符合法規的環境或福利，員工可以向勞工局檢舉，老闆可能會被處罰。  <br>3. 各行各業有不同的安全衛生標準，像是建築業、餐飲業、製造業都有專門的規定，老闆要依照相關法律執行。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00100 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 二 章 勞動契約</div>
       <div class="explanation-box">
@@ -257,11 +268,9 @@ footer {
         <div class="explanation-content"># 第100條（勞動基準法）<br><br>【一句話概括】<br>員工準備好要工作但雇主無理拒絕，雇主就不用付這段時間的薪水，但可以叫員工做其他工作。<br><br>【白話解釋】<br>這條的意思是：當員工已經到班、準備好要工作，卻被雇主無理拒絕進而無法提供勞務時，雇主不需要支付這段時間的工資。舉例來說，工廠作業員準時早上8點打卡上班，但管理幹部卻說「今天沒有工作，你先回去吧」，那這8小時沒有薪水是合法的，因為你根本沒有實際提供勞務。不過，雇主不能就這樣叫你回家放空，雇主有義務另外安排其他工作給你做。<br><br>【重點提示】</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00110 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞動契約，分為定期契約及不定期契約。臨時性、短期性、季節性及特定性工作得為定期契約；有繼續性工作應為不定期契約。派遣事業單位與派遣勞工訂定之勞動契約，應為不定期契約。
 定期契約屆滿後，有下列情形之一，視為不定期契約：
@@ -273,11 +282,9 @@ footer {
         <div class="explanation-content">【一句話概括】<br>勞動契約分兩種：定期契約（做一段時間就結束）和不定期契約（沒有結束日期），而且定期契約期滿後如果繼續工作，可能會自動變成不定期契約。<br><br>【白話解釋】<br>這條法規在說兩件事：<br><br>第一，告訴老闆和員工簽的合約有兩種：<br>- **定期契約**：就像打工、計畫型工作那種，做完就結束。比如過年期間打工三週、農忙時節幫忙兩個月，這種就叫定期契約。<br>- **不定期契約**：就像正職工作，沒有寫什麼時候結束。原則上只要是「長期、持續性的工作」，就應該簽不定期契約，像是長期雇用的員工。<br><br>第二，特別規定派遣公司的員工一定要簽不定期契約，不能簽定期的。<br><br>第三，如果本來是定期契約，做完之後老闆沒說要你走、你也繼續上班，那法律上就直接當作不定期契約了，等於老闆默認要一直用你了。<br><br>【重點提示】<br>1. **「繼續工作」的陷阱**：定期合約期滿後，就算老闆沒主動跟你說要續約，只要你繼續去上班做滿三十天，法律上就自動變不定期契約，老闆不能事後說「我們只是短期合作」。所以老闆如果不想長期雇用，合約期滿前一定要明確表態。<br><br>2. **派遣員工特別保護**：派遣公司跟你簽約時，不論什麼理由都必須是「不定期契約」，如果是定期的話，這條款在法律上會直接無效。<br><br>3. **季節性工作例外**：如果是完全季節性的工作（例如只在端午節包</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00120 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">未符合下列規定者，雇主不得與勞工為離職後競業禁止之約定：
 一、雇主有應受保護之正當營業利益。
@@ -292,11 +299,9 @@ footer {
         <div class="explanation-content">【一句話概括】<br>老闆想要員工離職後不能去同行工作，必須符合四個條件，否則這項約定就是无效的（約定不算數）。<br><br>【白話解釋】<br>這條法律在說，老闆要求員工「離職後不能去同類型的公司上班」，必須同時滿足四個條件，缺一不可：<br><br>第一，老闆確實有營業祕密要保護，像是獨家食譜、特殊技術。第二，員工在職時能接觸到這些祕密內容。第三，競業的範圍要合理，不能規定太嚴格。第四，老闆必須給員工「補償金」，而且這筆錢不能拿員工原本的薪水來抵。<br><br>舉個生活化的例子：小美在網路遊戲公司當程式設計師，離職後公司想規定她兩年內不能去騰訊或網易上班。小美必須確認：①公司真的有重要技術或創意②小美平常能接觸到這些東西③公司不能禁止她去便利商店打工④公司必須給小美一筆額外的錢。<br><br>【重點提示】<br>一般人最容易忽略的是第四個條件。很多人以為老闆每個月給的薪水就已經包含「讓你不準去同行上班」的費用了，其實法律說得清清楚楚：那筆「競業禁止補償金」不能是員工本來的工作薪資，老闆必須另外給錢才行。如果老闆沒有另外給補償金，或者補償金算在原本薪水裡，那這份競業禁止的約定就是无效的，法院會判定這條約定不算數。另外要注意的是，即使條件都符合，競</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00130 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">定期契約屆滿後或不定期契約因故停止履行後，未滿三個月而訂定新約或繼續履行原約時，勞工前後工作年資，應合併計算。</div>
       <div class="explanation-box">
@@ -304,11 +309,9 @@ footer {
         <div class="explanation-content">【一句話概括】<br>不管你是做有期限的工作或沒期限的工作，只要沒上班沒超過三個月就又回來工作，之前的年資全部都還算數。<br><br>【白話解釋】<br>假設你在便利商店做了兩年，契約期滿後休息了兩個月，然後老闆又找你回去繼續做。這時候你前面累積的兩年年資不會消失，而是會和新工作一起合併計算。就像玩遊戲存檔一樣，只要中斷時間不超過三個月，進度都不會不見。同樣的道理，如果你是正職員工，公司讓你放無薪假三個月內又叫你回來上班，你之前做的年資也都還在。<br><br>【重點提示】<br>這裡最重要的關鍵數字是「三個月」。如果你辭職或契約期滿後，超過三個月都沒回去工作，那麼前面的年資就可能不算了。因此如果你打算休息一段時間後再回原公司，最好在三個月內回去。同時要注意，如果公司願意讓你留職停薪，這也是一種保障年資的方式，必須在契約或公司規定中明確約定。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00140 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主調動勞工工作，不得違反勞動契約之約定，並應符合下列原則：
 一、基於企業經營上所必須，且不得有不當動機及目的。但法律另有規定者，從其規定。
@@ -321,11 +324,9 @@ footer {
         <div class="explanation-content">【一句話概括】<br>老闆要幫你換工作或調單位，原則上不能讓你吃虧，而且要有正當理由。<br><br>【白話解釋】<br>當公司要把員工調到別的部門、換工作內容、或者搬到很遠的地方上班時，法律規定老闆必須遵守幾個重要原則：<br><br>第一，調動必須是「公司真的需要」，不是老闆看某個員工不爽故意整人。第二，薪水不能變少、休假該有的照樣要有。第三，調過去的工作不能是你做不到的，例如叫一個不會開車的人去當司機。第四，如果你原本在台北上班，突然被調到高雄（新地點離家太遠），老闆要幫你處理搬家費或交通費這類問題。第五，老闆要想想這個調動會不會讓員工的家人生病、小孩沒人照顧等生活上的困難。<br><br>簡單來說：「老闆可以幫你換工作，但不能讓你吃虧，也不能沒事找事做。」<br><br>【重點提示】<br>很多人以為「老闆說調就調，員工只能乖乖聽話」，其實是錯的！如果老闆把你調去薪水變少、工作變累、地點超遠又完全不管你死活，你可以拒絕！而且如果因此影響到家庭生活（例如要通勤三小時、沒辦法照顧小孩），這也是違法。<br><br>最常見的問題是：很多人被老闆口頭說「配合一下」就默默接受了，事後才發現薪水變少、每天上班超級遠。記得：**調動要有書面證據、要看是否符合上面五個原則**，如果有任何一項被違反，都可以跟老闆好好商量，或找當地勞工局協調。</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00150 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">非有左列情事之一者，雇主不得預告勞工終止勞動契約：
 一、歇業或轉讓時。
@@ -338,11 +339,9 @@ footer {
         <div class="explanation-content"><br>【一句話概括】  <br>雇主只能在法律明定的五種情況下，才能合法預告員工終止勞動契約；否則就算提前說「要辭退」也不合法。  <br><br>【</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00160 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工有左列情形之一者，雇主得不經預告終止契約：
 一、於訂立勞動契約時為虛偽意思表示，使雇主誤信而有受損害之虞者。
@@ -354,20 +353,16 @@ footer {
 雇主依前項第一款、第二款及第四款至第六款規定終止契約者，應自知悉其情形之日起，三十日內為之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00170 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工在第五十條規定之停止工作期間或第五十九條規定之醫療期間，雇主不得終止契約。但雇主因天災、事變或其他不可抗力致事業不能繼續，經報主管機關核定者，不在此限。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00180 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">有下列情形之一者，勞工得不經預告終止契約：
 一、雇主於訂立勞動契約時為虛偽之意思表示，使勞工誤信而有受損害之虞者。
@@ -381,11 +376,9 @@ footer {
 第十七條規定於本條終止契約準用之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00190 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">特定性定期契約期限逾三年者，於屆滿三年後，勞工得終止契約。但應於三十日前預告雇主。
 不定期契約，勞工終止契約時，應準用第十六條第一項規定期間預告雇主。</div>
@@ -394,11 +387,9 @@ footer {
         <div class="explanation-content">## 第190條<br><br>### 一句話概括<br>><br>做太久的工作，老闆不能綁死你，期滿或想走時預告一下就能離開。<br><br>### 白話解釋<br>><br>這條在說兩種工作契約的情況：<br><br>**第一種：有期限的契約（像是兩年、三年這種有截止日的工作）**<br>如果你跟公司簽的工作契約，規定要做滿三年以上，只要做滿三年，之後你就可以說：「我不做了」，不需要任何理由。不過要走之前，要提前三十天告訴老闆，讓他有時間找人接替。<br><br>**第二種：沒有期限的契約（做到你自己不想做為止）**<br>如果你的工作是「沒有截止日期」的，想離職的話，同樣要提前預告雇主。預告多久呢？法律規定要準用第十六條第一項，那就是：<br>- 繼續工作三個月以上、未滿一年：**十天前**預告<br>- 繼續工作一年以上、未滿三年：**二十天前**預告<br>- 繼續工作三年以上：**三十天前**預告<br><br>簡單說，就是做越久，要預告的時間就越長。<br><br>### 重點提示<br>><br>📌 **三個月的試用期也算在內**，年資是從第一天上班開始算的。<br><br>📌 **預告期不是硬邦邦的**：如果雇主同意</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00200 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">未符合下列規定之一，雇主不得與勞工為最低服務年限之約定：
 一、雇主為勞工進行專業技術培訓，並提供該項培訓費用者。
@@ -412,11 +403,9 @@ footer {
 勞動契約因不可歸責於勞工之事由而於最低服務年限屆滿前終止者，勞工不負違反最低服務年限約定或返還訓練費用之責任。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00210 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主依第十一條或第十三條但書規定終止勞動契約者，其預告期間依左列各款之規定：
 一、繼續工作三個月以上一年未滿者，於十日前預告之。
@@ -426,11 +415,9 @@ footer {
 雇主未依第一項規定期間預告而終止契約者，應給付預告期間之工資。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00220 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主依前條終止勞動契約者，應依下列規定發給勞工資遣費：
 一、在同一雇主之事業單位繼續工作，每滿一年發給相當於一個月平均工資之資遣費。
@@ -438,11 +425,9 @@ footer {
 前項所定資遣費，雇主應於終止勞動契約三十日內發給。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00230 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">要派單位不得於派遣事業單位與派遣勞工簽訂勞動契約前，有面試該派遣勞工或其他指定特定派遣勞工之行為。
 要派單位違反前項規定，且已受領派遣勞工勞務者，派遣勞工得於要派單位提供勞務之日起九十日內，以書面向要派單位提出訂定勞動契約之意思表示。
@@ -456,90 +441,72 @@ footer {
         <div class="explanation-content">The user wants me to explain Taiwan Labor Standards Act Article 230 in simple Chinese, organized in three parts:<br>1. 【一句話概括】- One sentence summary<br>2. 【白話解釋】- Plain language explanation<br>3. 【重點提示】- Key points<br><br>Let me analyze Article 230:<br><br>This article is about "特定派遣" (specific dispatch labor). Let me parse it:<br><br>Article 230:<br>1. 要派單位不得於派遣事業單位與派遣勞工簽訂勞動契約前，有面試該派遣勞工或其他指定特定派遣勞工之行為。<br><br>-> The client company (要派單位) cannot interview the dispatch worker before the dispatch company and dispatch worker sign the labor contract, or specify a particular dispatch worker. This is to prevent circumvention of the dispatch system.<br><br>2. 要派單位違反前項規定，且已受領派遣勞工勞務者，派遣勞工得於要派單位提供勞務之日起九十日內，以書面向要派單位提出訂定勞動契約之意思表示。<br><br>-> If the client company violates the first paragraph and has received the dispatch worker's labor, the dispatch worker can, within 90 days from the day they started working at the client company, send a written notice to the client company requesting to sign a direct labor contract.<br><br><br>3. 要派單位應自前項派遣勞工意思表示到達之日起十日內，與其協商訂定勞動契約。逾期未協商或協商不成立者，視為雙方自期滿翌日成立勞動契約，並以派遣勞工於要派單位工作期間之勞動條件為勞動契約內容。<br><br>The client company must respond within 10 days. If they fail to negotiate or reach an agreement, the labor contract is automatically considered established. The contract terms will mirror the original dispatch worker's conditions at the client company.<br><br>4. 派遣事業單位及要派單位</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00240 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">有左列情形之一者，勞工不得向雇主請求加發預告期間工資及資遣費：
 一、依第十二條或第十五條規定終止勞動契約者。
 二、定期勞動契約期滿離職者。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00250 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞動契約終止時，勞工如請求發給服務證明書，雇主或其代理人不得拒絕。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00260 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">事業單位改組或轉讓時，除新舊雇主商定留用之勞工外，其餘勞工應依第十六條規定期間預告終止契約，並應依第十七條規定發給勞工資遣費。其留用勞工之工作年資，應由新雇主繼續予以承認。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00270 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 三 章 工資</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00280 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">工資由勞雇雙方議定之。但不得低於基本工資。
 前項基本工資，由中央主管機關設基本工資審議委員會擬訂後，報請行政院核定之。
 前項基本工資審議委員會之組織及其審議程序等事項，由中央主管機關另以辦法定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00290 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">工資之給付，應以法定通用貨幣為之。但基於習慣或業務性質，得於勞動契約內訂明一部以實物給付之。工資之一部以實物給付時，其實物之作價應公平合理，並適合勞工及其家屬之需要。
 工資應全額直接給付勞工。但法令另有規定或勞雇雙方另有約定者，不在此限。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00300 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">派遣事業單位積欠派遣勞工工資，經主管機關處罰或依第二十七條規定限期令其給付而屆期未給付者，派遣勞工得請求要派單位給付。要派單位應自派遣勞工請求之日起三十日內給付之。
 要派單位依前項規定給付者，得向派遣事業單位求償或扣抵要派契約之應付費用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00310 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">工資之給付，除當事人有特別約定或按月預付者外，每月至少定期發給二次，並應提供工資各項目計算方式明細；按件計酬者亦同。
 雇主應置備勞工工資清冊，將發放工資、工資各項目計算方式明細、工資總額等事項記入。工資清冊應保存五年。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00320 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主延長勞工工作時間者，其延長工作時間之工資，依下列標準加給：
 一、延長工作時間在二小時以內者，按平日每小時工資額加給三分之一以上。
@@ -548,38 +515,30 @@ footer {
 雇主使勞工於第三十六條所定休息日工作，工作時間在二小時以內者，其工資按平日每小時工資額另再加給一又三分之一以上；工作二小時後再繼續工作者，按平日每小時工資額另再加給一又三分之二以上。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00330 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主對勞工不得因性別而有差別之待遇。工作相同、效率相同者，給付同等之工資。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00340 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不得預扣勞工工資作為違約金或賠償費用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00350 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不按期給付工資者，主管機關得限期令其給付。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00360 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主有歇業、清算或宣告破產之情事時，勞工之下列債權受償順序與第一順位抵押權、質權或留置權所擔保之債權相同，按其債權比例受清償；未獲清償部分，有最優先受清償之權：
 一、本於勞動契約所積欠之工資未滿六個月部分。
@@ -594,29 +553,23 @@ footer {
 積欠工資墊償基金，由中央主管機關設管理委員會管理之。基金之收繳有關業務，得由中央主管機關，委託勞工保險機構辦理之。基金墊償程序、收繳與管理辦法、第三項之一定金額及管理委員會組織規程，由中央主管機關定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00370 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">事業單位於營業年度終了結算，如有盈餘，除繳納稅捐、彌補虧損及提列股息、公積金外，對於全年工作並無過失之勞工，應給與獎金或分配紅利。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00380 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 四 章 工作時間、休息、休假</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00390 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工正常工作時間，每日不得超過八小時，每週不得超過四十小時。
 前項正常工作時間，雇主經工會同意，如事業單位無工會者，經勞資會議同意後，得將其二週內二日之正常工作時數，分配於其他工作日。其分配於其他工作日之時數，每日不得超過二小時。但每週工作總時數不得超過四十八小時。
@@ -628,11 +581,9 @@ footer {
 第一項至第三項及第三十條之一之正常工作時間，雇主得視勞工照顧家庭成員需要，允許勞工於不變更每日正常工作時數下，在一小時範圍內，彈性調整工作開始及終止之時間。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00400 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">中央主管機關指定之行業，雇主經工會同意，如事業單位無工會者，經勞資會議同意後，其工作時間得依下列原則變更：
 一、四週內正常工作時數分配於其他工作日之時數，每日不得超過二小時，不受前條第二項至第四項規定之限制。
@@ -641,20 +592,16 @@ footer {
 依中華民國八十五年十二月二十七日修正施行前第三條規定適用本法之行業，除第一項第一款之農、林、漁、牧業外，均不適用前項規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00410 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">在坑道或隧道內工作之勞工，以入坑口時起至出坑口時止為工作時間。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00420 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主有使勞工在正常工作時間以外工作之必要者，雇主經工會同意，如事業單位無工會者，經勞資會議同意後，得將工作時間延長之。
 前項雇主延長勞工之工作時間連同正常工作時間，一日不得超過十二小時；延長之工作時間，一個月不得超過四十六小時，但雇主經工會同意，如事業單位無工會者，經勞資會議同意後，延長之工作時間，一個月不得超過五十四小時，每三個月不得超過一百三十八小時。
@@ -663,21 +610,17 @@ footer {
 在坑內工作之勞工，其工作時間不得延長。但以監視為主之工作，或有前項所定之情形者，不在此限。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00430 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主依第三十二條第一項及第二項規定使勞工延長工作時間，或使勞工於第三十六條所定休息日工作後，依勞工意願選擇補休並經雇主同意者，應依勞工工作之時數計算補休時數。
 前項之補休，其補休期限由勞雇雙方協商；補休期限屆期或契約終止未補休之時數，應依延長工作時間或休息日工作當日之工資計算標準發給工資；未發給工資者，依違反第二十四條規定論處。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00440 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第三條所列事業，除製造業及礦業外，因公眾之生活便利或其他特殊原因，有調整第三十條、第三十二條所定之正常工作時間及延長工作時間之必要者，得由當地主管機關會商目的事業主管機關及工會，就必要之限度內以命令調整之。</div>
       <div class="explanation-box">
@@ -685,11 +628,9 @@ footer {
         <div class="explanation-content">## 【一句話概括】<br>除製造業和礦業外的特定行業，因為生活需要或特殊原因，可以申請調整正常工作時間和加班時間。<br><br>---<br><br>## 【白話解釋】<br><br>這條法律是說：<br>除了「工廠」和「礦場」</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00450 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工工作採輪班制者，其工作班次，每週更換一次。但經勞工同意者不在此限。
 依前項更換班次時，至少應有連續十一小時之休息時間。但因工作特性或特殊原因，經中央目的事業主管機關商請中央主管機關公告者，得變更休息時間不少於連續八小時。
@@ -699,20 +640,16 @@ footer {
         <div class="explanation-content"># 第450條 白話解析<br><br>## 1.【一句話概括】<br>輪班工作的人每週要換一次班，換班時至少要休息11個小時，而且老闆要改休息時間的話，必須經過員工或工會同意。<br><br>---<br><br>## 2.【白話解釋】<br><br>**第一段：**<br>如果你是做輪班工作的人（比如今天上早班、明天上晚班那種），基本上每個禮拜就要換一次班。不</div>
       </div>
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00460 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工繼續工作四小時，至少應有三十分鐘之休息。但實行輪班制或其工作有連續性或緊急性者，雇主得在工作時間內，另行調配其休息時間。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00470 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工每七日中應有二日之休息，其中一日為例假，一日為休息日。
 雇主有下列情形之一，不受前項規定之限制：
@@ -724,21 +661,17 @@ footer {
 前項所定例假之調整，應經工會同意，如事業單位無工會者，經勞資會議同意後，始得為之。雇主僱用勞工人數在三十人以上者，應報當地主管機關備查。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00480 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">內政部所定應放假之紀念日、節日、勞動節及其他中央主管機關指定應放假日，均應休假。
 中華民國一百零五年十二月六日修正之前項規定，自一百零六年一月一日施行。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00490 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工在同一雇主或事業單位，繼續工作滿一定期間者，應依下列規定給予特別休假：
 一、六個月以上一年未滿者，三日。
@@ -754,76 +687,60 @@ footer {
 勞工依本條主張權利時，雇主如認為其權利不存在，應負舉證責任。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00500 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第三十六條所定之例假、休息日、第三十七條所定之休假及第三十八條所定之特別休假，工資應由雇主照給。雇主經徵得勞工同意於休假日工作者，工資應加倍發給。因季節性關係有趕工必要，經勞工或工會同意照常工作者，亦同。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00510 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">因天災、事變或突發事件，雇主認有繼續工作之必要時，得停止第三十六條至第三十八條所定勞工之假期。但停止假期之工資，應加倍發給，並應於事後補假休息。
 前項停止勞工假期，應於事後二十四小時內，詳述理由，報請當地主管機關核備。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00520 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">公用事業之勞工，當地主管機關認有必要時，得停止第三十八條所定之特別休假。假期內之工資應由雇主加倍發給。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00530 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工因健康或其他正當理由，不能接受正常工作時間以外之工作者，雇主不得強制其工作。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00540 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工因婚、喪、疾病或其他正當事由得請假；請假應給之假期及事假以外期間內工資給付之最低標準，由中央主管機關定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00550 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 五 章 童工、女工</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00560 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">十五歲以上未滿十六歲之受僱從事工作者，為童工。
 童工及十六歲以上未滿十八歲之人，不得從事危險性或有害性之工作。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00570 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不得僱用未滿十五歲之人從事工作。但國民中學畢業或經主管機關認定其工作性質及環境無礙其身心健康而許可者，不在此限。
 前項受僱之人，準用童工保護之規定。
@@ -831,38 +748,30 @@ footer {
 未滿十五歲之人透過他人取得工作為第三人提供勞務，或直接為他人提供勞務取得報酬未具勞僱關係者，準用前項及童工保護之規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00580 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">未滿十八歲之人受僱從事工作者，雇主應置備其法定代理人同意書及其年齡證明文件。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00590 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">童工每日之工作時間不得超過八小時，每週之工作時間不得超過四十小時，例假日不得工作。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00600 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">童工不得於午後八時至翌晨六時之時間內工作。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00610 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不得使女工於午後十時至翌晨六時之時間內工作。但雇主經工會同意，如事業單位無工會者，經勞資會議同意後，且符合下列各款規定者，不在此限：
 一、提供必要之安全衛生設施。
@@ -873,49 +782,39 @@ footer {
 第一項但書及前項規定，於妊娠或哺乳期間之女工，不適用之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00620 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">女工分娩前後，應停止工作，給予產假八星期；妊娠三個月以上流產者，應停止工作，給予產假四星期。
 前項女工受僱工作在六個月以上者，停止工作期間工資照給；未滿六個月者減半發給。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00630 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">女工在妊娠期間，如有較為輕易之工作，得申請改調，雇主不得拒絕，並不得減少其工資。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00640 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">子女未滿一歲須女工親自哺乳者，於第三十五條規定之休息時間外，雇主應每日另給哺乳時間二次，每次以三十分鐘為度。
 前項哺乳時間，視為工作時間。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00650 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 六 章 退休</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00660 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工有下列情形之一，得自請退休：
 一、工作十五年以上年滿五十五歲者。
@@ -923,11 +822,9 @@ footer {
 三、工作十年以上年滿六十歲者。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00670 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工非有下列情形之一，雇主不得強制其退休：
 一、年滿六十五歲者。
@@ -935,11 +832,9 @@ footer {
 前項第一款所規定之年齡，得由勞雇雙方協商延後之；對於擔任具有危險、堅強體力等特殊性質之工作者，得由事業單位報請中央主管機關予以調整，但不得少於五十五歲。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00680 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工退休金之給與標準如下：
 一、按其工作年資，每滿一年給與兩個基數。但超過十五年之工作年資，每滿一年給與一個基數，最高總數以四十五個基數為限。未滿半年者以半年計；滿半年者以一年計。
@@ -948,11 +843,9 @@ footer {
 第一項所定退休金，雇主應於勞工退休之日起三十日內給付，如無法一次發給時，得報經主管機關核定後，分期給付。本法施行前，事業單位原定退休標準優於本法者，從其規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00690 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主應依勞工每月薪資總額百分之二至百分之十五範圍內，按月提撥勞工退休準備金，專戶存儲，並不得作為讓與、扣押、抵銷或擔保之標的；其提撥之比率、程序及管理等事項之辦法，由中央主管機關擬訂，報請行政院核定之。
 雇主應於每年年度終了前，估算前項勞工退休準備金專戶餘額，該餘額不足給付次一年度內預估成就第五十三條或第五十四條第一項第一款退休條件之勞工，依前條計算之退休金數額者，雇主應於次年度三月底前一次提撥其差額，並送事業單位勞工退休準備金監督委員會審議。
@@ -965,20 +858,16 @@ footer {
 前二項有關勞工退休準備金必要資料之內容、範圍、申請程序及其他應遵行事項之辦法，由中央主管機關會商金融監督管理委員會定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00700 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工工作年資以服務同一事業者為限。但受同一雇主調動之工作年資，及依第二十條規定應由新雇主繼續予以承認之年資，應予併計。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00710 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工請領退休金之權利，自退休之次月起，因五年間不行使而消滅。
 勞工請領退休金之權利，不得讓與、抵銷、扣押或供擔保。
@@ -986,20 +875,16 @@ footer {
 前項專戶內之存款，不得作為抵銷、扣押、供擔保或強制執行之標的。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00720 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 七 章 職業災害補償</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00730 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工因遭遇職業災害而致死亡、失能、傷害或疾病時，雇主應依下列規定予以補償。但如同一事故，依勞工保險條例或其他法令規定，已由雇主支付費用補償者，雇主得予以抵充之：
 一、勞工受傷或罹患職業病時，雇主應補償其必需之醫療費用。職業病之種類及其醫療範圍，依勞工保險條例有關之規定。
@@ -1013,20 +898,16 @@ footer {
 （五）兄弟姐妹。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00740 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主依前條規定給付之補償金額，得抵充就同一事故所生損害之賠償金額。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00750 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第五十九條之受領補償權，自得受領之日起，因二年間不行使而消滅。
 受領補償之權利，不因勞工之離職而受影響，且不得讓與、抵銷、扣押或供擔保。
@@ -1034,31 +915,25 @@ footer {
 前項專戶內之存款，不得作為抵銷、扣押、供擔保或強制執行之標的。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00760 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">事業單位以其事業招人承攬，如有再承攬時，承攬人或中間承攬人，就各該承攬部分所使用之勞工，均應與最後承攬人，連帶負本章所定雇主應負職業災害補償之責任。
 事業單位或承攬人或中間承攬人，為前項之災害補償時，就其所補償之部分，得向最後承攬人求償。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00770 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">承攬人或再承攬人工作場所，在原事業單位工作場所範圍內，或為原事業單位提供者，原事業單位應督促承攬人或再承攬人，對其所僱用勞工之勞動條件應符合有關法令之規定。
 事業單位違背職業安全衛生法有關對於承攬人、再承攬人應負責任之規定，致承攬人或再承攬人所僱用之勞工發生職業災害時，應與該承攬人、再承攬人負連帶補償責任。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00780 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">要派單位使用派遣勞工發生職業災害時，要派單位應與派遣事業單位連帶負本章所定雇主應負職業災害補償之責任。
 前項之職業災害依勞工保險條例或其他法令規定，已由要派單位或派遣事業單位支付費用補償者，得主張抵充。
@@ -1066,87 +941,69 @@ footer {
 要派單位或派遣事業單位依本法規定給付之補償金額，得抵充就同一事故所生損害之賠償金額。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00790 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 八 章 技術生</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00800 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不得招收未滿十五歲之人為技術生。但國民中學畢業者，不在此限。
 稱技術生者，指依中央主管機關規定之技術生訓練職類中以學習技能為目的，依本章之規定而接受雇主訓練之人。
 本章規定，於事業單位之養成工、見習生、建教合作班之學生及其他與技術生性質相類之人，準用之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00810 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主招收技術生時，須與技術生簽訂書面訓練契約一式三份，訂明訓練項目、訓練期限、膳宿負擔、生活津貼、相關教學、勞工保險、結業證明、契約生效與解除之條件及其他有關雙方權利、義務事項，由當事人分執，並送主管機關備案。
 前項技術生如為未成年人，其訓練契約，應得法定代理人之允許。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00820 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主不得向技術生收取有關訓練費用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00830 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">技術生訓練期滿，雇主得留用之，並應與同等工作之勞工享受同等之待遇。雇主如於技術生訓練契約內訂明留用期間，應不得超過其訓練期間。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00840 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">技術生人數，不得超過勞工人數四分之一。勞工人數不滿四人者，以四人計。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00850 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">本法第四章工作時間、休息、休假，第五章童工、女工，第七章災害補償及其他勞工保險等有關規定，於技術生準用之。
 技術生災害補償所採薪資計算之標準，不得低於基本工資。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00860 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 九 章 工作規則</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00870 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">雇主僱用勞工人數在三十人以上者，應依其事業性質，就左列事項訂立工作規則，報請主管機關核備後並公開揭示之：
 一、工作時間、休息、休假、國定紀念日、特別休假及繼續性工作之輪班方法。
@@ -1163,49 +1020,39 @@ footer {
 十二、其他。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00880 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">工作規則，違反法令之強制或禁止規定或其他有關該事業適用之團體協約規定者，無效。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00890 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 十 章 監督與檢查</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00900 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">中央主管機關，為貫徹本法及其他勞工法令之執行，設勞工檢查機構或授權直轄市主管機關專設檢查機構辦理之；直轄市、縣（市）主管機關於必要時，亦得派員實施檢查。
 前項勞工檢查機構之組織，由中央主管機關定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00910 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">檢查員執行職務，應出示檢查證，各事業單位不得拒絕。事業單位拒絕檢查時，檢查員得會同當地主管機關或警察機關強制檢查之。
 檢查員執行職務，得就本法規定事項，要求事業單位提出必要之報告、紀錄、帳冊及有關文件或書面說明。如需抽取物料、樣品或資料時，應事先通知雇主或其代理人並掣給收據。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00920 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工發現事業單位違反本法及其他勞工法令規定時，得向雇主、主管機關或檢查機構申訴。
 雇主不得因勞工為前項申訴，而予以解僱、降調、減薪、損害其依法令、契約或習慣上所應享有之權益，或其他不利之處分。
@@ -1216,57 +1063,45 @@ footer {
 主管機關受理檢舉案件之保密及其他應遵行事項之辦法，由中央主管機關定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00930 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 十一 章 罰則</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00940 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">違反第五條規定者，處五年以下有期徒刑、拘役或科或併科新臺幣七十五萬元以下罰金。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00950 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">違反第六條規定者，處三年以下有期徒刑、拘役或科或併科新臺幣四十五萬元以下罰金。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00960 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">違反第四十二條、第四十四條第二項、第四十五條第一項、第四十七條、第四十八條、第四十九條第三項或第六十四條第一項規定者，處六個月以下有期徒刑、拘役或科或併科新臺幣三十萬元以下罰金。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00970 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">未依第十七條、第十七條之一第七項、第五十五條規定之標準或期限給付者，處新臺幣三十萬元以上一百五十萬元以下罰鍰，並限期令其給付，屆期未給付者，應按次處罰。
 違反第十三條、第十七條之一第一項、第四項、第二十六條、第五十條、第五十一條或第五十六條第二項規定者，處新臺幣九萬元以上四十五萬元以下罰鍰。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00980 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">有下列各款規定行為之一者，處新臺幣二萬元以上一百萬元以下罰鍰：
 一、違反第二十一條第一項、第二十二條至第二十五條、第三十條第一項至第三項、第六項、第七項、第三十二條、第三十四條至第四十一條、第四十九條第一項或第五十九條規定。
@@ -1277,85 +1112,67 @@ footer {
 有前三項規定行為之一者，主管機關得依事業規模、違反人數或違反情節，加重其罰鍰至法定罰鍰最高額二分之一。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00990 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">違反第四十五條第二項、第四項、第六十四條第三項及第六十九條第一項準用規定之處罰，適用本法罰則章規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01000 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">拒絕、規避或阻撓勞工檢查員依法執行職務者，處新臺幣三萬元以上十五萬元以下罰鍰。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01010 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">違反本法經主管機關處以罰鍰者，主管機關應公布其事業單位或事業主之名稱、負責人姓名、處分期日、違反條文及罰鍰金額，並限期令其改善；屆期未改善者，應按次處罰。
 主管機關裁處罰鍰，得審酌與違反行為有關之勞工人數、累計違法次數或未依法給付之金額，為量罰輕重之標準。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01020 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">法人之代表人、法人或自然人之代理人、受僱人或其他從業人員，因執行業務違反本法規定，除依本章規定處罰行為人外，對該法人或自然人並應處以各該條所定之罰金或罰鍰。但法人之代表人或自然人對於違反之發生，已盡力為防止行為者，不在此限。
 法人之代表人或自然人教唆或縱容為違反之行為者，以行為人論。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01030 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">本法所定之罰鍰，經主管機關催繳，仍不繳納時，得移送法院強制執行。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01040 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">第 十二 章 附則</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01050 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">為協調勞資關係，促進勞資合作，提高工作效率，事業單位應舉辦勞資會議。其辦法由中央主管機關會同經濟部訂定，並報行政院核定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01060 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">公務員兼具勞工身分者，其有關任（派）免、薪資、獎懲、退休、撫卹及保險（含職業災害）等事項，應適用公務員法令之規定。但其他所定勞動條件優於本法規定者，從其規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01070 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">經中央主管機關核定公告之下列工作者，得由勞雇雙方另行約定，工作時間、例假、休假、女性夜間工作，並報請當地主管機關核備，不受第三十條、第三十二條、第三十六條、第三十七條、第四十九條規定之限制。
 一、監督、管理人員或責任制專業人員。
@@ -1364,29 +1181,23 @@ footer {
 前項約定應以書面為之，並應參考本法所定之基準且不得損及勞工之健康及福祉。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01080 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">勞工工作年資自受僱之日起算，適用本法前之工作年資，其資遣費及退休金給與標準，依其當時應適用之法令規定計算；當時無法令可資適用者，依各該事業單位自訂之規定或勞雇雙方之協商計算之。適用本法後之工作年資，其資遣費及退休金給與標準，依第十七條及第五十五條規定計算。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01090 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">本法施行細則，由中央主管機關擬定，報請行政院核定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 01100 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">本法自公布日施行。
 本法中華民國八十九年六月二十八日修正公布之第三十條第一項及第二項，自九十年一月一日施行；一百零四年二月四日修正公布之第二十八條第一項，自公布後八個月施行；一百零四年六月三日修正公布之條文，自一百零五年一月一日施行；一百零五年十二月二十一日修正公布之第三十四條第二項施行日期，由行政院定之、第三十七條及第三十八條，自一百零六年一月一日施行。
@@ -1401,6 +1212,16 @@ footer {
         const text = it.querySelector('.article-text').textContent.toLowerCase();
         const num = it.querySelector('.article-num').textContent.toLowerCase();
         it.style.display = (text.includes(q.toLowerCase()) || num.includes(q.toLowerCase())) ? '' : 'none';
+      });
+      // Also show chapter headers that have visible items
+      document.querySelectorAll('.chapter-header').forEach(h => {
+        const following = [];
+        let sib = h.nextElementSibling;
+        while (sib && !sib.classList.contains('chapter-header')) {
+          if (sib.style.display !== 'none') following.push(sib);
+          sib = sib.nextElementSibling;
+        }
+        h.style.display = following.some(el => el.style.display !== 'none') ? '' : 'none';
       });
     }
     </script>

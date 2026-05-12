@@ -110,7 +110,21 @@ footer {
   border-top: 1px solid var(--border);
   margin-top: 60px;
 }
-.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #fff; border-radius: 6px; font-size: 0.9rem; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.chapter-nav a {
+  padding: 6px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.chapter-nav a:hover { background: var(--header-bg); color: #fff; border-color: var(--header-bg); }
+.chapter-header { background: var(--bg2); padding: 12px 20px; border-left: 4px solid var(--header-bg); margin: 28px 0 12px; border-radius: 0 6px 6px 0; }
+.chapter-header h2 { color: var(--header-bg); margin: 0; padding: 0; border: none; font-size: 1.1rem; }
+.chapter-nav-wrap { margin-bottom: 8px; }
 .btn:hover { background: var(--accent2); }
 .search-box { margin: 24px 0 20px; }
 .search-box input {
@@ -192,13 +206,36 @@ function indexHTML(laws) {
 }
 
 function lawPageHTML(law) {
-  const articles = law.articles.map(a => {
-    const articleText = a.ragContent || a.articleText;
-    return `
-    <div class="article-item">
+  // Group articles by chapter
+  const chapterMap = {};
+  const noChapter = [];
+  for (const a of law.articles) {
+    const ch = (a.chapter || '').trim();
+    if (ch && ch.length > 2) {
+      chapterMap[ch] = chapterMap[ch] || [];
+      chapterMap[ch].push(a);
+    } else {
+      noChapter.push(a);
+    }
+  }
+
+  // Build chapter nav if multiple chapters
+  const chapters = Object.keys(chapterMap);
+  const hasChapters = chapters.length > 1;
+  const chapterNav = hasChapters ? chapters.map(ch =>
+    `<a href="#ch-${ch.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g, '-')}">${ch}</a>`
+  ).join('\n') : '';
+
+  // Build article HTML grouped by chapter
+  const articlesHTML = [];
+  if (hasChapters) {
+    for (const [ch, arts] of Object.entries(chapterMap)) {
+      const anchor = 'ch-' + ch.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g, '-');
+      const items = arts.map(a => {
+        const articleText = a.ragContent || a.articleText;
+        return `<div class="article-item" data-chapter="${ch}">
       <div class="article-header">
         <span class="article-num">第 ${a.articleNum} 條</span>
-        <span class="article-meta">${a.category || ''}${a.chapter ? ' · ' + a.chapter.trim() : ''}</span>
       </div>
       <div class="article-text">${escapeHtml(articleText)}</div>
       ${a.explanation ? `<div class="explanation-box">
@@ -206,7 +243,41 @@ function lawPageHTML(law) {
         <div class="explanation-content">${a.explanation.replace(/\n/g, '<br>')}</div>
       </div>` : ''}
     </div>`;
-  }).join('\n');
+      }).join('\n');
+      articlesHTML.push(`<div class="chapter-header" id="${anchor}"><h2>${ch}</h2></div>\n${items}`);
+    }
+    if (noChapter.length > 0) {
+      const items = noChapter.map(a => {
+        const articleText = a.ragContent || a.articleText;
+        return `<div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 ${a.articleNum} 條</span>
+      </div>
+      <div class="article-text">${escapeHtml(articleText)}</div>
+      ${a.explanation ? `<div class="explanation-box">
+        <div class="section-title">☘️ Clover 白話解釋</div>
+        <div class="explanation-content">${a.explanation.replace(/\n/g, '<br>')}</div>
+      </div>` : ''}
+    </div>`;
+      }).join('\n');
+      if (items) articlesHTML.push(`<div class="chapter-header"><h2>其他條文</h2></div>\n${items}`);
+    }
+  } else {
+    // No chapter grouping - just list all
+    articlesHTML.push(law.articles.map(a => {
+      const articleText = a.ragContent || a.articleText;
+      return `<div class="article-item">
+      <div class="article-header">
+        <span class="article-num">第 ${a.articleNum} 條</span>
+      </div>
+      <div class="article-text">${escapeHtml(articleText)}</div>
+      ${a.explanation ? `<div class="explanation-box">
+        <div class="section-title">☘️ Clover 白話解釋</div>
+        <div class="explanation-content">${a.explanation.replace(/\n/g, '<br>')}</div>
+      </div>` : ''}
+    </div>`;
+    }).join('\n'));
+  }
 
   const schema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -221,12 +292,13 @@ function lawPageHTML(law) {
       <a href="/">首頁</a> &gt; ${law.lawName}
     </div>
     <h1>${law.lawName}</h1>
-    <p class="meta">${law.category} · 共 ${law.articles.length} 條法條</p>
+    <p class="meta">${law.category} · 共 ${law.articles.length} 條法條${hasChapters ? ' · ' + chapters.length + ' 章' : ''}</p>
+    ${hasChapters ? `<div class="chapter-nav-wrap"><div class="chapter-nav">\n${chapterNav}\n</div></div>` : ''}
     <div class="search-box">
-      <input type="text" id="articleSearch" placeholder="搜尋法條內容..." oninput="filterArticles(this.value)">
+      <input type="text" id="articleSearch" placeholder="搜尋法條..." oninput="filterArticles(this.value)">
     </div>
     <div class="article-list" id="articleList">
-      ${articles}
+      ${articlesHTML.join('\n')}
     </div>
     <script>
     function filterArticles(q) {
@@ -235,6 +307,16 @@ function lawPageHTML(law) {
         const text = it.querySelector('.article-text').textContent.toLowerCase();
         const num = it.querySelector('.article-num').textContent.toLowerCase();
         it.style.display = (text.includes(q.toLowerCase()) || num.includes(q.toLowerCase())) ? '' : 'none';
+      });
+      // Also show chapter headers that have visible items
+      document.querySelectorAll('.chapter-header').forEach(h => {
+        const following = [];
+        let sib = h.nextElementSibling;
+        while (sib && !sib.classList.contains('chapter-header')) {
+          if (sib.style.display !== 'none') following.push(sib);
+          sib = sib.nextElementSibling;
+        }
+        h.style.display = following.some(el => el.style.display !== 'none') ? '' : 'none';
       });
     }
     </script>

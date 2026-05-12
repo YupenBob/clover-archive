@@ -98,7 +98,21 @@ footer {
   border-top: 1px solid var(--border);
   margin-top: 60px;
 }
-.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #fff; border-radius: 6px; font-size: 0.9rem; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.chapter-nav a {
+  padding: 6px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.chapter-nav a:hover { background: var(--header-bg); color: #fff; border-color: var(--header-bg); }
+.chapter-header { background: var(--bg2); padding: 12px 20px; border-left: 4px solid var(--header-bg); margin: 28px 0 12px; border-radius: 0 6px 6px 0; }
+.chapter-header h2 { color: var(--header-bg); margin: 0; padding: 0; border: none; font-size: 1.1rem; }
+.chapter-nav-wrap { margin-bottom: 8px; }
 .btn:hover { background: var(--accent2); }
 .search-box { margin: 24px 0 20px; }
 .search-box input {

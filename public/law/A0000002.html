@@ -98,7 +98,21 @@ footer {
   border-top: 1px solid var(--border);
   margin-top: 60px;
 }
-.btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #fff; border-radius: 6px; font-size: 0.9rem; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.chapter-nav a {
+  padding: 6px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.chapter-nav a:hover { background: var(--header-bg); color: #fff; border-color: var(--header-bg); }
+.chapter-header { background: var(--bg2); padding: 12px 20px; border-left: 4px solid var(--header-bg); margin: 28px 0 12px; border-radius: 0 6px 6px 0; }
+.chapter-header h2 { color: var(--header-bg); margin: 0; padding: 0; border: none; font-size: 1.1rem; }
+.chapter-nav-wrap { margin-bottom: 8px; }
 .btn:hover { background: var(--accent2); }
 .search-box { margin: 24px 0 20px; }
 .search-box input {
@@ -133,34 +147,29 @@ footer {
     </div>
     <h1>憲法增修條文</h1>
     <p class="meta">一般法 · 共 13 條法條</p>
+    
     <div class="search-box">
-      <input type="text" id="articleSearch" placeholder="搜尋法條內容..." oninput="filterArticles(this.value)">
+      <input type="text" id="articleSearch" placeholder="搜尋法條..." oninput="filterArticles(this.value)">
     </div>
     <div class="article-list" id="articleList">
-      
-    <div class="article-item">
+      <div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00010 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">為因應國家統一前之需要，依照憲法第二十七條第一項第三款及第一百七十四條第一款之規定，增修本憲法條文如左：</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00020 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">中華民國自由地區選舉人於立法院提出憲法修正案、領土變更案，經公告半年，應於三個月內投票複決，不適用憲法第四條、第一百七十四條之規定。
 憲法第二十五條至第三十四條及第一百三十五條之規定，停止適用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00030 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">總統、副總統由中華民國自由地區全體人民直接選舉之，自中華民國八十五年第九任總統、副總統選舉實施。總統、副總統候選人應聯名登記，在選票上同列一組圈選，以得票最多之一組為當選。在國外之中華民國自由地區人民返國行使選舉權，以法律定之。
 總統發布行政院院長與依憲法經立法院同意任命人員之任免命令及解散立法院之命令，無須行政院院長之副署，不適用憲法第三十七條之規定。
@@ -174,11 +183,9 @@ footer {
 立法院提出總統、副總統彈劾案，聲請司法院大法官審理，經憲法法庭判決成立時，被彈劾人應即解職。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00040 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">行政院院長由總統任命之。行政院院長辭職或出缺時，在總統未任命行政院院長前，由行政院副院長暫行代理。憲法第五十五條之規定，停止適用。
 行政院依左列規定，對立法院負責，憲法第五十七條之規定，停止適用：
@@ -189,11 +196,9 @@ footer {
 各機關之組織、編制及員額，應依前項法律，基於政策或業務需要決定之。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00050 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">立法院立法委員自第七屆起一百一十三人，任期四年，連選得連任，於每屆任滿前三個月內，依左列規定選出之，不受憲法第六十四條及第六十五條之限制：
 一、自由地區直轄市、縣市七十三人。每縣市至少一人。
@@ -208,11 +213,9 @@ footer {
 立法委員除現行犯外，在會期中，非經立法院許可，不得逮捕或拘禁。憲法第七十四條之規定，停止適用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00060 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">司法院設大法官十五人，並以其中一人為院長、一人為副院長，由總統提名，經立法院同意任命之，自中華民國九十二年起實施，不適用憲法第七十九條之規定。司法院大法官除法官轉任者外，不適用憲法第八十一條及有關法官終身職待遇之規定。
 司法院大法官任期八年，不分屆次，個別計算，並不得連任。但並為院長、副院長之大法官，不受任期之保障。
@@ -222,11 +225,9 @@ footer {
 司法院所提出之年度司法概算，行政院不得刪減，但得加註意見，編入中央政府總預算案，送立法院審議。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00070 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">考試院為國家最高考試機關，掌理左列事項，不適用憲法第八十三條之規定：
 一、考試。
@@ -236,11 +237,9 @@ footer {
 憲法第八十五條有關按省區分別規定名額，分區舉行考試之規定，停止適用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00080 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">監察院為國家最高監察機關，行使彈劾、糾舉及審計權，不適用憲法第九十條及第九十四條有關同意權之規定。
 監察院設監察委員二十九人，並以其中一人為院長、一人為副院長，任期六年，由總統提名，經立法院同意任命之。憲法第九十一條至第九十三條之規定停止適用。
@@ -250,20 +249,16 @@ footer {
 憲法第一百零一條及第一百零二條之規定，停止適用。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00090 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">立法委員之報酬或待遇，應以法律定之。除年度通案調整者外，單獨增加報酬或待遇之規定，應自次屆起實施。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00100 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">省、縣地方制度，應包括左列各款，以法律定之，不受憲法第一百零八條第一項第一款、第一百零九條、第一百十二條至第一百十五條及第一百二十二條之限制：
 一、省設省政府，置委員九人，其中一人為主席，均由行政院院長提請總統任命之。
@@ -276,11 +271,9 @@ footer {
 台灣省政府之功能、業務與組織之調整，得以法律為特別之規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00110 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">國家應獎勵科學技術發展及投資，促進產業升級，推動農漁業現代化，重視水資源之開發利用，加強國際經濟合作。
 經濟及科學技術發展，應與環境及生態保護兼籌並顧。
@@ -297,20 +290,16 @@ footer {
 國家對於僑居國外國民之政治參與，應予保障。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00120 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">自由地區與大陸地區間人民權利義務關係及其他事務之處理，得以法律為特別之規定。</div>
       
     </div>
-
-    <div class="article-item">
+<div class="article-item">
       <div class="article-header">
         <span class="article-num">第 00130 條</span>
-        <span class="article-meta">一般法</span>
       </div>
       <div class="article-text">憲法之修改，須經立法院立法委員四分之一之提議，四分之三之出席，及出席委員四分之三之決議，提出憲法修正案，並於公告半年後，經中華民國自由地區選舉人投票複決，有效同意票過選舉人總額之半數，即通過之，不適用憲法第一百七十四條之規定。</div>
       
@@ -323,6 +312,16 @@ footer {
         const text = it.querySelector('.article-text').textContent.toLowerCase();
         const num = it.querySelector('.article-num').textContent.toLowerCase();
         it.style.display = (text.includes(q.toLowerCase()) || num.includes(q.toLowerCase())) ? '' : 'none';
+      });
+      // Also show chapter headers that have visible items
+      document.querySelectorAll('.chapter-header').forEach(h => {
+        const following = [];
+        let sib = h.nextElementSibling;
+        while (sib && !sib.classList.contains('chapter-header')) {
+          if (sib.style.display !== 'none') following.push(sib);
+          sib = sib.nextElementSibling;
+        }
+        h.style.display = following.some(el => el.style.display !== 'none') ? '' : 'none';
       });
     }
     </script>
