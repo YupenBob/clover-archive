@@ -254,7 +254,7 @@ function lawPageHTML(law) {
         const articleText = a.ragContent || a.articleText;
         return `<div class="article-item" data-chapter="${ch}">
       <div class="article-header">
-        <span class="article-num">第 ${a.articleNum} 條</span>
+        <span class="article-num">第 ${parseInt(a.articleNum)} 條</span>
       </div>
       <div class="article-text">${escapeHtml(articleText)}</div>
       ${a.explanation ? `<div class="explanation-box">
@@ -270,7 +270,7 @@ function lawPageHTML(law) {
         const articleText = a.ragContent || a.articleText;
         return `<div class="article-item">
       <div class="article-header">
-        <span class="article-num">第 ${a.articleNum} 條</span>
+        <span class="article-num">第 ${parseInt(a.articleNum)} 條</span>
       </div>
       <div class="article-text">${escapeHtml(articleText)}</div>
       ${a.explanation ? `<div class="explanation-box">
@@ -287,7 +287,7 @@ function lawPageHTML(law) {
       const articleText = a.ragContent || a.articleText;
       return `<div class="article-item">
       <div class="article-header">
-        <span class="article-num">第 ${a.articleNum} 條</span>
+        <span class="article-num">第 ${parseInt(a.articleNum)} 條</span>
       </div>
       <div class="article-text">${escapeHtml(articleText)}</div>
       ${a.explanation ? `<div class="explanation-box">
