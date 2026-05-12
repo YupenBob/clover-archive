@@ -219,9 +219,22 @@ function lawPageHTML(law) {
     </div>
     <h1>${law.lawName}</h1>
     <p class="meta">${law.category} · 共 ${law.articles.length} 條法條</p>
-    <div class="article-list">
+    <div class="search-box">
+      <input type="text" id="articleSearch" placeholder="搜尋法條內容..." oninput="filterArticles(this.value)">
+    </div>
+    <div class="article-list" id="articleList">
       ${articles}
     </div>
+    <script>
+    function filterArticles(q) {
+      const items = document.querySelectorAll('.article-item');
+      items.forEach(it => {
+        const text = it.querySelector('.article-text').textContent.toLowerCase();
+        const num = it.querySelector('.article-num').textContent.toLowerCase();
+        it.style.display = (text.includes(q.toLowerCase()) || num.includes(q.toLowerCase())) ? '' : 'none';
+      });
+    }
+    </script>
     <script type="application/ld+json">${schema}</script>`;
 
   return baseHTML({ title: law.lawName, body });

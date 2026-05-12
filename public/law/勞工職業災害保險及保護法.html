@@ -131,7 +131,10 @@ footer {
     </div>
     <h1>勞工職業災害保險及保護法</h1>
     <p class="meta">一般法 · 共 109 條法條</p>
-    <div class="article-list">
+    <div class="search-box">
+      <input type="text" id="articleSearch" placeholder="搜尋法條內容..." oninput="filterArticles(this.value)">
+    </div>
+    <div class="article-list" id="articleList">
       
     <div class="article-item">
       <div class="article-header">
@@ -1114,6 +1117,16 @@ footer {
       
     </div>
     </div>
+    <script>
+    function filterArticles(q) {
+      const items = document.querySelectorAll('.article-item');
+      items.forEach(it => {
+        const text = it.querySelector('.article-text').textContent.toLowerCase();
+        const num = it.querySelector('.article-num').textContent.toLowerCase();
+        it.style.display = (text.includes(q.toLowerCase()) || num.includes(q.toLowerCase())) ? '' : 'none';
+      });
+    }
+    </script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalCode","name":"勞工職業災害保險及保護法","jurisdiction":"Taiwan","description":"勞工職業災害保險及保護法 共 109 條"}</script>
   </main>
   <footer>
