@@ -242,7 +242,7 @@ function lawPageHTML(law) {
   const chapters = Object.keys(chapterMap);
   const hasChapters = chapters.length > 1;
   const chapterNav = hasChapters ? chapters.map(ch =>
-    `<a href="#ch-${ch.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g, '-')}">${ch}</a>`
+    `<a href="#ch-${ch.replace(/[^a-zA-Z0-9\u4e00-\u9fff]/g, '-')}">${ch} (${chapterMap[ch].length}條)</a>`
   ).join('\n') : '';
 
   // Build article HTML grouped by chapter
